@@ -64,41 +64,6 @@ All configurations are treated as **code**.
 
 ---
 
-## Repository Structure
-
-```text
-.
-├── terraform/
-│   ├── vpc/
-│   ├── ec2/
-│   └── outputs.tf
-│
-├── ansible/
-│   ├── inventory/
-│   ├── roles/
-│   │   ├── kafka/
-│   │   ├── zookeeper/
-│   │   ├── elastic-beats/
-│   │   └── logstash/
-│   └── playbooks/
-│
-├── kubernetes/
-│   ├── elasticsearch/
-│   └── kibana/
-│
-├── github-actions/
-│   ├── beats-deploy.yml
-│   ├── kafka-setup.yml
-│   └── validation.yml
-│
-├── dashboards/
-│   └── kibana-exports/
-│
-└── docs/
-    ├── architecture.md
-    ├── ci-cd-flow.md
-    └── runbooks.md
-```
 Key Design Decisions
 	•	Kafka as buffer to absorb log spikes from large fleets
 	•	GitHub Actions over Jenkins to eliminate master maintenance
